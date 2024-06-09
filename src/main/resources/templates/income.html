@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Income</title>
+</head>
+<body>
+<h1>Income</h1>
+<form action="#" th:action="@{/income}" method="post">
+    <label for="amount">Amount:</label>
+    <input type="text" id="amount" name="amount"/>
+    <button type="submit">Add Income</button>
+</form>
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Amount</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="income : ${incomes}">
+        <td th:text="${income.id}"></td>
+        <td th:text="${income.amount}"></td>
+    </tr>
+    </tbody>
+</table>
+<a href="/sold.html">Sold</a>
+</body>
+</html>
