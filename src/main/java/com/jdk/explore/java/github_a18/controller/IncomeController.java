@@ -25,4 +25,5 @@ public class IncomeController {
         incomeService.save(amount);
         return "redirect:/income";
     }
+    //fin 2 PIPELINE
 }
