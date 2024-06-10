@@ -20,7 +20,6 @@ public class IncomeController {
         model.addAttribute("incomes", incomeService.findAll());
         return "income";
     }
-//1 un deuxieme commit
     @PostMapping("/income")
     public String addIncome(@RequestParam("amount") BigDecimal amount) {
         incomeService.save(amount);
